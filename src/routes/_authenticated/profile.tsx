@@ -17,6 +17,7 @@ const GOALS = ["Ahorrar dinero", "Comer saludable", "Perder peso", "Ganar múscu
 const LEVELS = ["Principiante", "Intermedio", "Avanzado"];
 const TIMES = ["menos de 15 min", "15-30 min", "30-60 min", "más de 60 min"];
 
+function Profile() {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
   const [name, setName] = useState("");
