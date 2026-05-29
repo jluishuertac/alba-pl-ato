@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable";
 import { useAuth } from "@/lib/auth-context";
 import { Logo } from "@/components/AppShell";
 import { ArrowLeft, Loader2 } from "lucide-react";
@@ -58,17 +57,6 @@ function AuthPage() {
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Algo salió mal");
     } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const google = async () => {
-    setSubmitting(true);
-    try {
-      const result = await lovable.auth.signInWithOAuth("google", { redirect_uri: window.location.origin });
-      if (result.error) throw result.error;
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Error con Google");
       setSubmitting(false);
     }
   };
