@@ -12,7 +12,6 @@ export const Route = createFileRoute("/_authenticated/profile")({
 });
 
 const PREFS = ["Mediterránea", "Vegetariana", "Vegana", "Alta proteína", "Bajo en carbo"];
-const PREFS = ["Mediterránea", "Vegetariana", "Vegana", "Alta proteína", "Bajo en carbo"];
 const RESTS = ["Sin gluten", "Sin lactosa", "Sin frutos secos", "Sin mariscos", "Sin cerdo"];
 const GOALS = ["Ahorrar dinero", "Comer saludable", "Perder peso", "Ganar músculo", "Cocinar rápido", "Alimentación familiar"];
 const LEVELS = ["Principiante", "Intermedio", "Avanzado"];
